@@ -1,0 +1,7 @@
+1. Abra o arquivo package.json e apague a linha referente a sqlite3;
+2. Verifique se existe a pasta node_modules, caso sim a exclua;
+3.Exclua o arquivo package-lock.json;
+4. Abra o terminal e acessa a pasta api, no meu caso foi ../gatitoBook/api;
+5. Rode o comando npm i;
+6. Rode também: npm i sqlite3
+7. Ao término do processo rode o comando clear para limpar seu terminal e em seguida npm start;
