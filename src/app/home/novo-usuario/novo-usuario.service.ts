@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NovoUsuario } from './novo-usuario';
+import { environment } from 'src/environments/environment'
+
+const API = environment.apiURL
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +13,11 @@ export class NovoUsuarioService {
   constructor( private http: HttpClient ) { }
 
   cadastraNovoUsuario( novoUsuario: NovoUsuario ) {
-    return this.http.post('http://localhost:4200/api/user/signup', novoUsuario)
+    return this.http.post(`${API}/api/user/signup`, novoUsuario)
   }
 
   verificaUsuarioExistente( nomeUsuario:string ) {
-    return this.http.get(`http://localhost:4200/api/user/exists/${nomeUsuario}`)
+    return this.http.get(`${API}/api/user/exists/${nomeUsuario}`)
   }
 
 }
